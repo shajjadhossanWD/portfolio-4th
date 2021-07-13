@@ -1,0 +1,314 @@
+/*========== google fonts ============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*---------------- common css -------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: bold;
+    text-transform: capitalize;    
+}
+html{
+    font-size: 100%;
+}
+
+
+
+/* ------------------------------------------
+             home section start 
+----------------------------------------------- */
+
+#home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2c3e50;
+    background-size: cover;
+    
+}
+
+/* ========menu bars ============= */
+.menu-bar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 15px -1px white;
+    left: -255px;
+    transition: all .5s linear;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo{
+    margin-top: 30px;
+    color: white;
+}
+.logo h1{
+    font-size: 30px;
+}
+.logo h1 span{
+    color: #E02C6D;
+}
+nav li{
+    list-style: none;
+    margin-top: 15px;
+    transition: .6s ease;
+}
+nav li:hover{
+    padding-left: 3px;
+    transform: scale(1.1);
+    border-left: 1px solid #fff;
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+nav li a i{
+    color:#E02C6D; 
+}
+#checkebox{
+    display: none;
+}
+.menu .toggole-one i{
+    position: fixed;
+    color: white;
+    font-size: 24px;
+    left: 16px;
+    top: 40px;
+    transition: all 0.4s linear;
+    cursor: pointer;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+.menu-bar .toggole-two i{
+    color: #E02C6D;
+    font-size: 24px;
+    position: absolute;
+    top: 16px;
+    left: 220px;
+    transition: all 0.4s linear;
+    cursor: pointer;
+    opacity: 0;
+}
+.menu .toggole-one i{
+    font-size: 24px;
+}
+#checkebox:checked ~ .menu-bar{
+    left: 0;
+}
+#checkebox:checked ~ .toggole-one i{
+    opacity: 0;
+}
+#checkebox:checked ~ .menu-bar .toggole-two i{
+    opacity: 1;
+}
+.menu .menu-right{
+    position: absolute;
+    right: 124px;
+    top: 40px;
+}
+.menu .menu-right .btn{
+    background-color: #E02C6D;
+    font-size: 16px;
+    color: white;
+    padding: 10px 24px;
+    text-decoration: none;
+}
+.menu .menu-right .btn i{
+    padding-right: 5px;
+} 
+
+/* =======================home content ================== */
+.home-concept{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.home-concept .home-left{
+    width: 50%;
+}
+.home-concept .home-left h1{
+    margin: 100px 80px 10px 155px;
+    font-size: 60px;
+    color: white;
+    line-height: 80px;
+    
+}
+.home-concept .home-left .btn{
+    background: #E02C6D;
+    text-decoration: none;
+    padding: 10px 24px;
+    margin: 0 0 0px 155px;
+    color: white;
+}
+
+.home-concept .home-right{
+    width: 50%;
+    padding-top: 135px;
+}
+.home-concept .home-right img{
+    width: 550px;
+    height: 430px;
+}
+
+/* ------------------------
+     players section start 
+---------------------------- */
+
+#players{
+    background: rgb(245, 233, 233);
+   
+    width: 100%;
+}
+.all-players{
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 70px;
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+    margin: auto;
+   
+    
+}
+.all-players .blog{
+    background-color: #fff;
+    width: 330px;
+    height: 474px;
+   
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+}
+.all-players .blog img{
+    width: 300px;
+    height: 256px;
+    background-size: cover;
+}
+.all-players .blog .blog-content{
+    padding: 15px;
+}
+.all-players .blog .blog-content p{
+    text-align: justify;
+    line-height: 26px;
+    color: #6C6C6C;
+    font-weight: normal;
+}
+.all-players .blog .blog-content h1{
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------
+                     media qua.
+.................. -------------------------- */
+@media screen and (min-width:765px) and (max-width:1026px) {
+    /*-------- home section -------- */
+    #home{
+       min-width:100vw;
+    }
+    .home-concept{
+        flex-direction: column;
+    }
+    html{
+        font-size: 80%;
+    }
+    .home-concept .home-left{
+        width: 100%;
+    }
+    .home-concept .home-right{
+        width: 100%;
+        padding-top: 50px;
+    }
+    .home-concept .home-right img{
+        width: 480px;
+        height: 410px;
+        margin: 0 200px;
+    }
+    .home-concept .home-left h1{
+        margin: 100px 70px 0 100px;
+        font-size: 50px;
+        width: 80%;
+    }
+    .menu .menu-right{
+        right: 50px;
+        top: 30px;
+    }
+    .home-concept .home-left .btn{
+        padding: 10px 24px;
+        margin: 0 0 0 100px;
+    }
+    .menu .menu-right .btn{
+        padding: 10px 20px;
+    }
+
+    /*------------- players section ----------- */
+    .all-players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media screen and (max-width:764px) {
+    #home{
+        min-width: 100vw;
+    }
+    .home-concept{
+        flex-direction: column;
+    }
+    html{
+        font-size: 55%;
+    }
+    .home-concept .home-left{
+        width: 100%;
+    }
+    .home-concept .home-right{
+        width: 100%;
+        padding: 40px 40px 0px 20px;
+    }
+    .home-concept .home-right img{
+        width: 320px;
+        height: 250px;
+    }
+    .home-concept .home-left h1{
+        margin: 100px 0 0 20px;
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .menu .menu-right{
+        right: 20px;
+        top: 22px;
+    }
+    .home-concept .home-left .btn{
+        padding: 8px 18px;
+        margin: 0 0 0 20px;
+    }
+    .menu .menu-right .btn{
+        padding: 8px 18px;
+    }
+}
