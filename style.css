@@ -15,8 +15,9 @@ html{
 }
 main{
     background: #ffffff;
+    width: 100%;
+    background-size: cover;
 }
-
 
 
 /* ------------------------------------------
@@ -132,7 +133,7 @@ nav li a i{
 .home-concept{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .home-concept .home-left{
@@ -149,13 +150,14 @@ nav li a i{
     background: #E02C6D;
     text-decoration: none;
     padding: 10px 24px;
-    margin: 0 0 0px 155px;
+    margin: 0 0 0px 155px; 
     color: white;
 }
 
 .home-concept .home-right{
     width: 50%;
     padding-top: 135px;
+    padding-bottom: 80px;
 }
 .home-concept .home-right img{
     width: 550px;
@@ -295,6 +297,102 @@ nav li a i{
 }
 
 
+/* --------------------------------
+       contact section 
+--------------------------- */
+.contact-form{
+    margin-top: 70px;
+}
+.contact-form .form{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+.form .input-box input{
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2c3e50;
+    border-bottom: 2px solid #E02C6D;
+
+}
+.form .input-box input::placeholder{
+    color:#2c3e50;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form .input-box textarea{
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2c3e50;
+    height: 150px ;
+    border-bottom: 2px solid #E02C6D;
+    margin-bottom: 20px;
+
+}
+.form .input-box textarea::placeholder{
+    color:#2c3e50;
+    font-size: 20px;
+    font-weight: bold;
+}
+.form .input-box a{
+    padding: 10px 24px;
+    background: #E02C6D;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+   
+}
+
+/*------------------------------------------------------------------------------
+                           footer section start 
+--------------------------------------------------------------------------- */
+footer{
+    width: 100%;
+    margin-top: 150px;
+}
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+footer .container .logo img{
+    width: 480px;
+    height: 110px;
+}
+footer .container .social{
+     margin-bottom: 20px;
+}
+footer .container .social a img{
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+footer .container .social p{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    margin-left: 0 60px 60px 60px;
+    
+}
+
+
+
 
 
 
@@ -309,7 +407,7 @@ nav li a i{
 
 @media screen and (max-width:687px) {
     #home{
-        width: 100%;
+        min-width: 100%;
     }
     .home-concept{
         flex-direction: column;
@@ -391,20 +489,27 @@ nav li a i{
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
         margin: auto;
-        padding: 70px 0 20px 30px;
+        padding: 70px 15px 20px 15px;
     }
-    .matches .box{
-        width: 90%;
+    .matches .box {
+       margin: auto;
+    }
+
+    /* footer section  */
+    footer .container .logo img{
+        width: 280px;
+        height: 70px;
     }
 
 }
 
 
-@media screen and (min-width:688px) and (max-width:1026px) {
+@media screen and (min-width:688px) and (max-width:1024px){
     /*-------- home section -------- */
     #home{
        width:100%;
        background-size: 100% 100%;
+       overflow: hidden;
     }
     .home-concept{
         flex-direction: column;
