@@ -303,6 +303,16 @@ nav li a i{
 .contact-form{
     margin-top: 70px;
 }
+#contact .headers{
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 70px;
+    font-size: 30px;
+}
+#contact hr{
+    margin: auto;
+    width: 20%;
+}
 .contact-form .form{
    display: flex;
    justify-content: center;
