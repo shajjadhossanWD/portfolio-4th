@@ -218,17 +218,16 @@ nav li a i{
 }
 .c-america{
     width: 1050px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 .c-america .left-part{
-    width: 50%;
+    width: 65%;
     margin-top: 165px;
 }
 .c-america .left-part h1{
     font-weight: bold;
-    font-size: 48px;
+    font-size: 45px;
     line-height: 60px;
 }
 .c-america .left-part p{
@@ -236,7 +235,7 @@ nav li a i{
     font-size: 16px;
     line-height: 28px;
     color: #6C6C6C;
-    width: 80%;
+    width: 100%;
     margin-bottom: 25px;
 }
 .c-america .left-part .btn{
@@ -250,11 +249,50 @@ nav li a i{
     margin-top: 165px;
 }
 .c-america .right-part img{
-    width: 555px;
-    height: 420px;
+    width: 505px;
+    height: 380px;
     background-size: cover;
 }
 
+/*-------------------------------
+         upcoming mathch section 
+------------------------------------------- */
+#upcoming-match{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.matches{
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 27px;
+    grid-column-gap: 16px;
+    margin-top: 85px;
+    
+}
+.matches .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.matches .box .box-img img{
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 5px;
+}
+.matches .box .box-content{
+    padding: 15px;
+}
+.matches .box .box-content p{
+    color: #E02C6D;
+}
+.matches .box .box-content span{
+    color: #2c3e50;
+}
 
 
 
@@ -317,6 +355,48 @@ nav li a i{
         flex-flow: column;
         margin:auto;
     }
+
+    /* copa america section  */
+    .c-america{
+       grid-template-columns: repeat(1, 1fr);
+       width: 100%;
+    }
+    .c-america .left-part{
+       width: 90%;
+       margin: auto;
+       padding: 70px 0 10px 15px;
+
+    }
+    .c-america .left-part h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .c-america .left-part p{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .c-america .right-part{
+        width:100%;
+        margin: auto;
+        padding: 21px 0 21px 20px;
+    }
+    .c-america .right-part img{
+        width: 315px;
+        height: 235px;
+    }
+
+    /* upcomming matches start  */
+
+    .matches{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+        padding: 70px 0 20px 30px;
+    }
+    .matches .box{
+        width: 90%;
+    }
+
 }
 
 
@@ -371,6 +451,59 @@ nav li a i{
         flex-flow: column;
         margin:auto;
     }
+
+        /* copa america section  */
+    .c-america{
+       grid-template-columns: repeat(1, 1fr);
+       width: 100%;
+    }
+    .c-america .left-part{
+       width: 82%;
+       margin: auto;
+       padding-top: 70px;
+       padding-bottom: 30px;
+    }
+    .c-america .left-part h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .c-america .left-part p{
+        font-size: 16px;
+        line-height:28px;
+    }
+    .c-america .right-part{
+        width:82%;
+        margin: auto;
+      
+    }
+    .c-america .right-part img{
+        width: 455px;
+        height: 375px;
+    }
+
+        /* upcomming matches start  */
+
+        .matches{
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+            margin: auto;
+            padding: 70px 0 20px 30px;
+        }
+        .matches .box{
+            display: flex;
+            justify-content: space-between;
+            text-align: start;
+            width: 88%;
+            margin: auto;
+        }
+        .matches .box .box-img img{
+            width: 250px;
+            height: 200px;
+            background-size: cover;
+        }
+        .matches .box .box-content{
+            width: 70%;
+        }
 }
 
 
