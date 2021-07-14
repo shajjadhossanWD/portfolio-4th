@@ -13,6 +13,9 @@
 html{
     font-size: 100%;
 }
+main{
+    background: #ffffff;
+}
 
 
 
@@ -23,7 +26,6 @@ html{
 #home{
     position: relative;
     width: 100%;
-    min-height: 100vh;
     background-color: #2c3e50;
     background-size: cover;
     
@@ -165,9 +167,9 @@ nav li a i{
 ---------------------------- */
 
 #players{
-    background: rgb(245, 233, 233);
-   
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .all-players{
     width: 1050px;
@@ -175,10 +177,7 @@ nav li a i{
     grid-template-columns: repeat(3, 1fr);
     padding-top: 70px;
     grid-column-gap: 30px;
-    grid-row-gap: 27px;
-    margin: auto;
-   
-    
+    grid-row-gap: 27px;  
 }
 .all-players .blog{
     background-color: #fff;
@@ -209,9 +208,52 @@ nav li a i{
     padding-bottom: 10px;
 }
 
-
-
-
+/*-----------------------------
+        copa america section 
+------------------------- */
+#copa-america{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.c-america{
+    width: 1050px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.c-america .left-part{
+    width: 50%;
+    margin-top: 165px;
+}
+.c-america .left-part h1{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+}
+.c-america .left-part p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6C6C6C;
+    width: 80%;
+    margin-bottom: 25px;
+}
+.c-america .left-part .btn{
+    padding: 10px 24px;
+    background: #E02C6D;
+    color: #fff;
+    text-decoration: none;
+}
+.c-america .right-part{
+    width: 50%;
+    margin-top: 165px;
+}
+.c-america .right-part img{
+    width: 555px;
+    height: 420px;
+    background-size: cover;
+}
 
 
 
@@ -226,10 +268,63 @@ nav li a i{
 /* ------------------------------------------
                      media qua.
 .................. -------------------------- */
-@media screen and (min-width:765px) and (max-width:1026px) {
+
+@media screen and (max-width:687px) {
+    #home{
+        width: 100%;
+    }
+    .home-concept{
+        flex-direction: column;
+    }
+    html{
+        font-size: 60%;
+    }
+    .home-concept .home-left{
+        width: 100%;
+    }
+    .home-concept .home-right{
+        width: 100%;
+        padding: 40px 40px 40px 15px;
+    }
+    .home-concept .home-right img{
+        width: 310px;
+        height: 245px;
+    }
+    .home-concept .home-left h1{
+        margin: 100px 0 30px 20px;
+        font-size: 30px;
+        line-height: 50px;
+    }
+    .menu .menu-right{
+       right: 18px;
+        top: 52px;
+    }
+    .home-concept .home-left .btn{
+        padding: 8px 18px;
+        margin: 0 0 0 20px;
+    }
+    .menu .menu-right .btn{
+        padding: 8px 10px;
+    }
+
+    /* player section  */
+    .all-players{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .all-players .blog{
+        flex-flow: column;
+        margin:auto;
+    }
+}
+
+
+@media screen and (min-width:688px) and (max-width:1026px) {
     /*-------- home section -------- */
     #home{
-       min-width:100vw;
+       width:100%;
+       background-size: 100% 100%;
     }
     .home-concept{
         flex-direction: column;
@@ -250,13 +345,13 @@ nav li a i{
         margin: 0 200px;
     }
     .home-concept .home-left h1{
-        margin: 100px 70px 0 100px;
+        margin: 100px 70px 30px 100px;
         font-size: 50px;
         width: 80%;
     }
     .menu .menu-right{
         right: 50px;
-        top: 30px;
+        top: 52px;
     }
     .home-concept .home-left .btn{
         padding: 10px 24px;
@@ -268,47 +363,14 @@ nav li a i{
 
     /*------------- players section ----------- */
     .all-players{
+        width: 100%;
         grid-template-columns: repeat(2, 1fr);
-    }
 
+    }
+    .all-players .blog{
+        flex-flow: column;
+        margin:auto;
+    }
 }
 
 
-@media screen and (max-width:764px) {
-    #home{
-        min-width: 100vw;
-    }
-    .home-concept{
-        flex-direction: column;
-    }
-    html{
-        font-size: 55%;
-    }
-    .home-concept .home-left{
-        width: 100%;
-    }
-    .home-concept .home-right{
-        width: 100%;
-        padding: 40px 40px 0px 20px;
-    }
-    .home-concept .home-right img{
-        width: 320px;
-        height: 250px;
-    }
-    .home-concept .home-left h1{
-        margin: 100px 0 0 20px;
-        font-size: 35px;
-        line-height: 50px;
-    }
-    .menu .menu-right{
-        right: 20px;
-        top: 22px;
-    }
-    .home-concept .home-left .btn{
-        padding: 8px 18px;
-        margin: 0 0 0 20px;
-    }
-    .menu .menu-right .btn{
-        padding: 8px 18px;
-    }
-}
